@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{   background: url("./images/bgc2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+min-height: 100vh;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+}
+.container{
+    min-width: 950px;
+    overflow-x: hidden;
+    width: 100%;
+    padding: 80px 0;
+}
+.container .main-card{
+    width: 180%;
+    display: flex;
+    
+    justify-content: space-evenly;
+    transition: all 1s ease;
+}
+.main-card .cards .card:hover{
+    transform: translateY(-15px);
+}
+.main-card .cards .card{
+background: #fff;
+width: calc(100% / 3 - 10px);
+padding: 60px;
+border-radius: 24px;
+
+transition: all 0.4s ease;
+}
+#two:checked ~ .main-card {
+    margin-left: -100%;
+}
+.main-card .cards{
+    width: cal(100% / 2 - 10px);
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 20px;
+    flex-wrap: wrap;
+    padding-left: 200px;
+}
+.cards .card .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.cards .card .content .img{
+height: 130px;
+width: 130px;
+margin-bottom: 14px;
+background-color: rgb(128, 128, 223);
+border-radius: 50%;
+padding: 3px;
+}
+.card .content .img img{
+height: 100%;
+width: 100%;
+object-fit: cover;
+border-radius: 50%;
+border: 3px solid #fff;
+}
+.card .content .details .name{
+font-size: 20px;
+font-style: italic;
+font-weight: 500;
+}
+.card .content .details .job{
+    font-size: 20px;
+    font-style: italic;
+    color: rgb(8, 8, 241);
+
+}
+.card .content .media-icons{
+    display: flex;
+    margin-top: 10px;
+}
+.card .content .media-icons a{
+    height: 35px;
+    width: 35px;
+    background-color: rgb(128, 128, 223);
+    color: #fff;
+    margin: 0 4px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    border: 2px solid transparent;
+    font-style: 14px;
+    transition: all 0.4s ease;
+}
+.card .content .media-icons a:hover{
+    border-color: #ff676d;
+    color: #ff676d;
+    background-color: #fff;
+}
+.button{
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+
+}
+.button label{
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    margin: 0 4px;
+    border-radius: 20px;
+    transition: all 0.5s ease ;
+}
+
+.button label.active{
+width: 35px;
+}
+#one:checked ~ .button label.one{
+width: 35px;
+}
+#two:checked ~ .button label.two{
+    width: 35px;
+}
+#two:checked ~ .button label.one{
+    width: 15px;
+}
+#one:checked ~ .button label.two{
+    width: 15px;
+}
+input[type="radio"]{
+    display: none;
+}
+@media (max-width:768px) {
+    .main-card .cards .card{
+        width: calc(100% / 2 - 10px);
+        margin: 20px 0 10px 0;
+    }
+    .container{
+        background: url("./images/bgc2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+  
+}
+@media (max-width:600px) {
+    .main-card .cards .card{
+        width: 100%;
+        margin-left: 186px;
+
+    }
+    .container{
+        background: url("./images/bgc2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
